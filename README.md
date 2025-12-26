@@ -1,130 +1,1246 @@
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Ghodake | Digital Marketing Specialist | ROI-Focused Marketing</title>
+    <meta name="description" content="Transform your business with data-driven digital marketing. Proven results: 4.5x ROAS, 40% CAC reduction, 200% traffic growth.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/46eb616b-004e-4519-bf52-73ceb8eb60d9/id-preview-a691b24c--76ba6637-f43c-4c7e-8cb0-e744032b8114.lovable.app-1766647712892.png" />
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #0f0f0f;
+            overflow-x: hidden;
+        }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/46eb616b-004e-4519-bf52-73ceb8eb60d9/id-preview-a691b24c--76ba6637-f43c-4c7e-8cb0-e744032b8114.lovable.app-1766647712892.png" />
-    <script type="module" crossorigin src="/assets/index-DpOfNo0z.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DV_kWM6E.css">
-  
-<style>
-	#lovable-badge {
-		position: fixed;
-		bottom: 10px;
-		right: 10px;
-		width: 141px;
-		padding: 5px 13px;
-		background-color: #000;
-		color: #fff;
-		font-size: 12px;
-		border-radius: 5px;
-		font-family: sans-serif;
-		display: flex;
-		align-items: center;
-		gap: 4px;
-		z-index: 1000000;
-		text-transform: none !important;
-		font-feature-settings: normal !important;
-		font-weight: 400 !important;
-	}
-</style>
+        /* Animated Background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            color: #fff !important;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1.2s;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1.4s;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 1.6s;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.8s;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .badge-icon {
+            font-size: 2rem;
+        }
+
+        .badge-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        #services {
+            background: #0f0f0f;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card li {
+            color: rgba(255, 255, 255, 0.7);
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .service-metric {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background: linear-gradient(180deg, #0f0f0f 0%, #1a1a2e 100%);
+        }
+
+        .case-study {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 4rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+
+        .case-study:hover {
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: translateX(10px);
+        }
+
+        .case-study h3 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .case-meta {
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .case-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .case-content h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .case-content p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        .results-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .result-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .result-text {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+        }
+
+        .tools-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .tool-tag {
+            background: rgba(102, 126, 234, 0.2);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        /* Pricing Section */
+        #pricing {
+            background: #0f0f0f;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            border: 2px solid rgba(102, 126, 234, 0.5);
+            transform: scale(1.05);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .pricing-card h3 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1.5rem 0;
+        }
+
+        .price-period {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pricing-card li {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .pricing-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            padding: 4rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: rgba(102, 126, 234, 0.5);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #764ba2;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0.5rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .scroll-animate.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .services-grid,
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            .services-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
+<body>
+    <div class="bg-gradient"></div>
 
-  <body>
-    <div id="root"></div><script src="https://cdn.gpteng.co/lovable.js" type="module"></script>
-  
-<a id="lovable-badge" target="_blank" href="https://lovable.dev/projects/76ba6637-f43c-4c7e-8cb0-e744032b8114?utm_source=lovable-badge">
-	<span style="color: #A1A1AA;">Edit with</span> <svg width="60" height="12" viewBox="0 0 116 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M109.108 21.115C107.649 21.115 106.381 20.8369 105.306 20.2807C104.23 19.7154 103.391 18.8675 102.789 17.7369C102.196 16.6063 101.9 15.2068 101.9 13.5382C101.9 11.9518 102.21 10.5841 102.83 9.4353C103.45 8.27736 104.307 7.3975 105.401 6.79574C106.495 6.19398 107.74 5.89309 109.135 5.89309C110.475 5.89309 111.665 6.18486 112.705 6.76839C113.744 7.35192 114.551 8.19986 115.125 9.31221C115.709 10.4246 116.001 11.7557 116.001 13.3057C116.001 13.8619 115.996 14.3041 115.987 14.6324H105.087V11.7603H113.347L111.788 12.2937C111.788 11.546 111.679 10.9215 111.46 10.42C111.25 9.90941 110.94 9.52647 110.53 9.27118C110.12 9.01588 109.623 8.88824 109.039 8.88824C108.428 8.88824 107.89 9.03868 107.425 9.33956C106.97 9.63133 106.614 10.069 106.359 10.6525C106.112 11.236 105.989 11.9381 105.989 12.7587V14.1674C105.989 15.0062 106.117 15.7174 106.372 16.3009C106.628 16.8844 106.992 17.3266 107.466 17.6275C107.941 17.9193 108.501 18.0651 109.149 18.0651C109.86 18.0651 110.448 17.8828 110.913 17.5181C111.378 17.1443 111.67 16.62 111.788 15.9453H115.932C115.805 17.0029 115.444 17.9193 114.852 18.6943C114.268 19.4693 113.489 20.0665 112.513 20.4859C111.537 20.9053 110.402 21.115 109.108 21.115Z" fill="#FCFBF8"/>
-<path d="M96.5167 1.1061H100.661V20.7181H96.5167V1.1061Z" fill="#FCFBF8"/>
-<path d="M89.4649 21.1148C88.6808 21.1148 87.9788 20.978 87.3588 20.7045C86.7479 20.4309 86.2282 20.0207 85.7996 19.4736C85.3711 18.9174 85.052 18.2336 84.8423 17.4221L85.2799 17.5452V20.7182H81.177V6.28948H85.321V9.51713L84.856 9.59919C85.0657 8.82419 85.3848 8.16316 85.8133 7.6161C86.251 7.05992 86.7844 6.63595 87.4135 6.34419C88.0426 6.04331 88.7492 5.89287 89.5333 5.89287C90.7095 5.89287 91.7307 6.19831 92.5968 6.80919C93.463 7.42007 94.1286 8.29992 94.5936 9.44875C95.0586 10.5885 95.2911 11.9424 95.2911 13.5107C95.2911 15.0698 95.054 16.4237 94.5799 17.5726C94.1058 18.7123 93.4265 19.5876 92.5421 20.1984C91.6668 20.8093 90.6411 21.1148 89.4649 21.1148ZM88.1794 17.9555C88.7994 17.9555 89.3191 17.7732 89.7385 17.4084C90.167 17.0437 90.4861 16.5286 90.6958 15.863C90.9146 15.1974 91.0241 14.4133 91.0241 13.5107C91.0241 12.608 90.9146 11.8239 90.6958 11.1583C90.4861 10.4927 90.167 9.97757 89.7385 9.61286C89.3191 9.23904 88.7994 9.05213 88.1794 9.05213C87.5685 9.05213 87.0442 9.23904 86.6066 9.61286C86.178 9.97757 85.8544 10.4973 85.6355 11.172C85.4167 11.8376 85.3073 12.6171 85.3073 13.5107C85.3073 14.4133 85.4167 15.1974 85.6355 15.863C85.8544 16.5286 86.178 17.0437 86.6066 17.4084C87.0442 17.7732 87.5685 17.9555 88.1794 17.9555ZM81.177 1.1061H85.321V6.28948H81.177V1.1061Z" fill="#FCFBF8"/>
-<path d="M70.7749 21.115C69.8723 21.115 69.0608 20.9372 68.3405 20.5816C67.6293 20.226 67.0686 19.72 66.6583 19.0635C66.2571 18.3979 66.0565 17.6229 66.0565 16.7385C66.0565 15.3891 66.4531 14.3588 67.2464 13.6476C68.0396 12.9274 69.1839 12.4578 70.6792 12.239L73.182 11.8834C73.6834 11.8104 74.08 11.7193 74.3718 11.6099C74.6636 11.5004 74.8778 11.3546 75.0146 11.1722C75.1514 10.9807 75.2197 10.7391 75.2197 10.4474C75.2197 10.1465 75.1377 9.87294 74.9736 9.62677C74.8186 9.37147 74.5815 9.17088 74.2624 9.025C73.9524 8.87 73.574 8.7925 73.1272 8.7925C72.4161 8.7925 71.8462 8.97941 71.4177 9.35324C70.9892 9.71794 70.7567 10.2194 70.7202 10.8576H66.4395C66.4759 9.89118 66.7677 9.03412 67.3148 8.28647C67.8709 7.52971 68.6414 6.94162 69.6261 6.52221C70.6108 6.1028 71.7505 5.89309 73.0452 5.89309C74.4037 5.89309 75.5525 6.11648 76.4917 6.56324C77.4308 7.00089 78.1374 7.63 78.6115 8.45059C79.0947 9.27118 79.3364 10.2513 79.3364 11.391V17.4087C79.3364 18.056 79.382 18.6578 79.4731 19.214C79.5734 19.761 79.7147 20.1075 79.8971 20.2534V20.7184H75.589C75.4887 20.3263 75.4112 19.8841 75.3565 19.3918C75.3018 18.8994 75.2699 18.3797 75.2608 17.8326L75.9309 17.5454C75.7577 18.1928 75.4386 18.79 74.9736 19.3371C74.5177 19.875 73.9296 20.3081 73.2093 20.6363C72.4981 20.9554 71.6867 21.115 70.7749 21.115ZM72.3067 18.0788C72.8902 18.0788 73.4053 17.9512 73.8521 17.6959C74.2989 17.4315 74.6408 17.0668 74.8778 16.6018C75.124 16.1368 75.2471 15.6079 75.2471 15.0153V13.1279L75.589 13.3194C75.3702 13.6112 75.0967 13.8346 74.7684 13.9896C74.4493 14.1446 74.0162 14.2768 73.4692 14.3862L72.4161 14.5913C71.714 14.7281 71.1852 14.9378 70.8296 15.2204C70.4831 15.5031 70.3099 15.8997 70.3099 16.4103C70.3099 16.9209 70.4968 17.3266 70.8706 17.6275C71.2445 17.9284 71.7231 18.0788 72.3067 18.0788Z" fill="#FCFBF8"/>
-<path d="M51.962 6.28958H56.3659L60.1542 18.6668H58.8276L62.4656 6.28958H66.7463L61.7544 20.7182H57.1454L51.962 6.28958Z" fill="#FCFBF8"/>
-<path d="M45.4846 21.115C44.0531 21.115 42.7949 20.805 41.7099 20.185C40.634 19.565 39.7997 18.6806 39.2071 17.5318C38.6236 16.3829 38.3318 15.0381 38.3318 13.4972C38.3318 11.9563 38.6236 10.616 39.2071 9.47633C39.7997 8.3275 40.634 7.44309 41.7099 6.82309C42.7949 6.20309 44.0531 5.89309 45.4846 5.89309C46.916 5.89309 48.1697 6.20309 49.2456 6.82309C50.3215 7.44309 51.1512 8.3275 51.7347 9.47633C52.3274 10.616 52.6237 11.9563 52.6237 13.4972C52.6237 15.0381 52.3274 16.3829 51.7347 17.5318C51.1512 18.6806 50.3215 19.565 49.2456 20.185C48.1697 20.805 46.916 21.115 45.4846 21.115ZM45.4846 17.9421C46.0863 17.9421 46.6015 17.7779 47.03 17.4497C47.4585 17.1123 47.7868 16.6154 48.0147 15.959C48.2427 15.2934 48.3566 14.4728 48.3566 13.4972C48.3566 12.0475 48.1059 10.9488 47.6044 10.2012C47.103 9.44441 46.3963 9.06603 45.4846 9.06603C44.8828 9.06603 44.3631 9.23471 43.9255 9.57206C43.4969 9.9003 43.1687 10.3972 42.9408 11.0628C42.7128 11.7193 42.5988 12.5307 42.5988 13.4972C42.5988 14.4637 42.7128 15.2797 42.9408 15.9453C43.1687 16.6109 43.4969 17.1123 43.9255 17.4497C44.3631 17.7779 44.8828 17.9421 45.4846 17.9421Z" fill="#FCFBF8"/>
-<path d="M26.2195 1.10631H30.514V17.6623L29.7481 16.7734C29.7481 16.7734 31.8751 16.7734 35.534 16.7734C39.1928 16.7734 38.6925 20.7184 38.6925 20.7184H26.2195V1.10631Z" fill="#FCFBF8"/>
-<mask id="mask0_19703_15608" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.90405 0.885124C9.16477 0.885124 11.8081 3.53543 11.8081 6.80474V9.05456H13.773C17.0337 9.05456 19.677 11.7049 19.677 14.9742C19.677 18.2435 17.0337 20.8938 13.773 20.8938H0V6.80474C0 3.53543 2.64333 0.885124 5.90405 0.885124Z" fill="url(#paint0_linear_19703_15608)"/>
-</mask>
-<g mask="url(#mask0_19703_15608)">
-<g filter="url(#filter0_f_19703_15608)">
-<circle cx="8.63157" cy="11.5658" r="13.3199" fill="#4B73FF"/>
-</g>
-<g filter="url(#filter1_f_19703_15608)">
-<ellipse cx="10.0949" cy="4.25612" rx="17.0591" ry="13.3199" fill="#FF66F4"/>
-</g>
-<g filter="url(#filter2_f_19703_15608)">
-<ellipse cx="12.8775" cy="1.74957" rx="13.3199" ry="11.6977" fill="#FF0105"/>
-</g>
-<g filter="url(#filter3_f_19703_15608)">
-<circle cx="10.3319" cy="4.25254" r="8.01052" fill="#FE7B02"/>
-</g>
-</g>
-<defs>
-<filter id="filter0_f_19703_15608" x="-10.6577" y="-7.72354" width="38.5786" height="38.5786" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="2.98472" result="effect1_foregroundBlur_19703_15608"/>
-</filter>
-<filter id="filter1_f_19703_15608" x="-12.9337" y="-15.0332" width="46.057" height="38.5786" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="2.98472" result="effect1_foregroundBlur_19703_15608"/>
-</filter>
-<filter id="filter2_f_19703_15608" x="-6.41182" y="-15.9176" width="38.5786" height="35.3342" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="2.98472" result="effect1_foregroundBlur_19703_15608"/>
-</filter>
-<filter id="filter3_f_19703_15608" x="-3.64803" y="-9.72742" width="27.9599" height="27.9599" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="2.98472" result="effect1_foregroundBlur_19703_15608"/>
-</filter>
-<linearGradient id="paint0_linear_19703_15608" x1="6.62168" y1="4.40129" x2="12.6165" y2="20.8863" gradientUnits="userSpaceOnUse">
-<stop offset="0.025" stop-color="#FF8E63"/>
-<stop offset="0.56" stop-color="#FF7EB0"/>
-<stop offset="0.95" stop-color="#4B73FF"/>
-</linearGradient>
-</defs>
-</svg>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Ayush Ghodake</div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">🚀 Available for Projects</span>
+                <h1>
+                    Transform Your Business<br>
+                    With <span class="hero-highlight">Data-Driven</span><br>
+                    Digital Marketing
+                </h1>
+                <p>
+                    I help US businesses achieve measurable growth through ROI-focused SEO, paid advertising, and AI-powered marketing strategies. Real results, not just promises.
+                </p>
 
-	<button id="lovable-badge-close" style="position: absolute; top: -2px; right: 5px; cursor: pointer; font-size: 14px; color: #A1A1AA;">&times;</button>
-</a>
-<script>
-	// Don't show the lovable-badge if the page is in an iframe or if it's being rendered by puppeteer (screenshot service)
-	if (window.self !== window.top || navigator.userAgent.includes('puppeteer')) {
-		// the page is in an iframe
-		var badge = document.getElementById('lovable-badge');
-		if (badge) {
-			badge.style.display = 'none';
-		}
-	}
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">4.5x</span>
+                        <span class="stat-label">Average ROAS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">CAC Reduction</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200%</span>
+                        <span class="stat-label">Traffic Growth</span>
+                    </div>
+                </div>
 
-	// Add click event listener to close button
-	var closeButton = document.getElementById('lovable-badge-close');
-	if (closeButton) {
-		closeButton.addEventListener('click', function(event) {
-			event.preventDefault();
-			event.stopPropagation();
-			var badge = document.getElementById('lovable-badge');
-			if (badge) {
-				badge.style.display = 'none';
-			}
-		});
-	}
-</script>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                    <a href="#portfolio" class="btn btn-secondary">View Case Studies</a>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="badge-item">
+                        <span class="badge-icon">🎯</span>
+                        <span class="badge-text">Google Certified</span>
+                    </div>
+                    <div class="badge-item">
+                        <span class="badge-icon">📱</span>
+                        <span class="badge-text">Meta Blueprint</span>
+                    </div>
+                    <div class="badge-item">
+                        <span class="badge-icon">📊</span>
+                        <span class="badge-text">HubSpot Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <span class="section-badge">WHAT I DO</span>
+                <h2 class="section-title">Services That Drive Revenue</h2>
+                <p class="section-subtitle">
+                    Comprehensive digital marketing solutions designed to deliver measurable business growth and exceptional ROI.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">🎯</div>
+                    <h3>SEO & Content Strategy</h3>
+                    <p>Dominate search results and attract high-quality organic traffic that converts.</p>
+                    <ul>
+                        <li>Technical & on-page optimization</li>
+                        <li>Strategic keyword research</li>
+                        <li>Content creation & optimization</li>
+                        <li>Competitor analysis</li>
+                    </ul>
+                    <span class="service-metric">50-200% Traffic Growth</span>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">💰</div>
+                    <h3>Paid Advertising</h3>
+                    <p>Scale profitably with expertly managed Google Ads and Meta campaigns.</p>
+                    <ul>
+                        <li>Google Ads (Search & Display)</li>
+                        <li>Facebook & Instagram Ads</li>
+                        <li>Advanced A/B testing</li>
+                        <li>Conversion optimization</li>
+                    </ul>
+                    <span class="service-metric">3-5x Average ROAS</span>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">📊</div>
+                    <h3>Marketing Analytics</h3>
+                    <p>Make data-driven decisions with comprehensive tracking and insights.</p>
+                    <ul>
+                        <li>Google Analytics 4 setup</li>
+                        <li>Custom dashboards</li>
+                        <li>Performance tracking</li>
+                        <li>ROI analysis</li>
+                    </ul>
+                    <span class="service-metric">Real-Time Insights</span>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI-Powered Marketing</h3>
+                    <p>Leverage cutting-edge AI tools for efficiency and superior results.</p>
+                    <ul>
+                        <li>ChatGPT & Jasper.ai content</li>
+                        <li>AdCreative.ai designs</li>
+                        <li>Marketing automation</li>
+                        <li>Workflow optimization</li>
+                    </ul>
+                    <span class="service-metric">40% Time Savings</span>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">📱</div>
+                    <h3>Social Media Management</h3>
+                    <p>Build engaged communities and drive conversions across platforms.</p>
+                    <ul>
+                        <li>LinkedIn, Instagram, Facebook</li>
+                        <li>Content creation & scheduling</li>
+                        <li>Community engagement</li>
+                        <li>Growth strategies</li>
+                    </ul>
+                    <span class="service-metric">Consistent Growth</span>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">✉️</div>
+                    <h3>Email Marketing</h3>
+                    <p>Nurture leads and drive sales with strategic email campaigns.</p>
+                    <ul>
+                        <li>Campaign strategy & design</li>
+                        <li>Marketing automation</li>
+                        <li>List segmentation</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                    <span class="service-metric">35% Engagement Boost</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <span class="section-badge">PROVEN RESULTS</span>
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">
+                    Real campaigns, real results. See how I've helped businesses like yours achieve explosive growth.
+                </p>
+            </div>
+
+            <div class="case-study scroll-animate">
+                <h3>E-commerce Fashion Brand - Meta Ads Transformation</h3>
+                <p class="case-meta">US-based accessories retailer | 60-day campaign | $50K revenue generated</p>
+                
+                <div class="case-content">
+                    <div>
+                        <h4>The Challenge</h4>
+                        <p>High customer acquisition costs ($25) and low ROAS (2.1x) were eating into profits. The brand was struggling to compete with larger competitors and couldn't scale profitably.</p>
+                        
+                        <h4 style="margin-top: 2rem;">The Solution</h4>
+                        <p>Implemented advanced audience segmentation, created 25+ A/B tested ad variations using AI tools, and built a comprehensive retargeting funnel with Lookalike audiences.</p>
+                    </div>
+                    
+                    <div class="results-box">
+                        <h4>Results Achieved</h4>
+                        <div class="result-item">
+                            <span class="result-number">40%</span>
+                            <span class="result-text">Reduction in CAC<br>($25 → $15 per customer)</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">4.5x</span>
+                            <span class="result-text">ROAS Improvement<br>(from 2.1x baseline)</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">$50K</span>
+                            <span class="result-text">Revenue Generated<br>in just 60 days</span>
+                        </div>
+                        <div class="tools-used">
+                            <span class="tool-tag">Meta Ads Manager</span>
+                            <span class="tool-tag">AdCreative.ai</span>
+                            <span class="tool-tag">Google Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study scroll-animate">
+                <h3>SaaS Startup - Organic Traffic Explosion</h3>
+                <p class="case-meta">Project management software | 6-month SEO campaign | 1,650% growth</p>
+                
+                <div class="case-content">
+                    <div>
+                        <h4>The Challenge</h4>
+                        <p>Zero organic traffic and difficulty competing with established players. The startup needed a cost-effective way to generate qualified leads without burning through their limited marketing budget.</p>
+                        
+                        <h4 style="margin-top: 2rem;">The Solution</h4>
+                        <p>Developed a long-tail keyword strategy, optimized technical SEO, and created high-quality content addressing specific user pain points and use cases.</p>
+                    </div>
+                    
+                    <div class="results-box">
+                        <h4>Results Achieved</h4>
+                        <div class="result-item">
+                            <span class="result-number">3,500</span>
+                            <span class="result-text">Monthly Visitors<br>(from 200 baseline)</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">15</span>
+                            <span class="result-text">Top 3 Rankings<br>for target keywords</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">45</span>
+                            <span class="result-text">Qualified Leads<br>per month generated</span>
+                        </div>
+                        <div class="tools-used">
+                            <span class="tool-tag">Semrush</span>
+                            <span class="tool-tag">Yoast SEO</span>
+                            <span class="tool-tag">Search Console</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study scroll-animate">
+                <h3>B2B Magazine - Enterprise Lead Generation</h3>
+                <p class="case-meta">Enterprise publication | 90-day multi-channel campaign | $75K revenue</p>
+                
+                <div class="case-content">
+                    <div>
+                        <h4>The Challenge</h4>
+                        <p>Generate qualified B2B leads for premium subscriptions targeting C-suite executives and decision-makers in enterprise companies with long sales cycles.</p>
+                        
+                        <h4 style="margin-top: 2rem;">The Solution</h4>
+                        <p>Created targeted LinkedIn ad campaigns, implemented AI-powered email nurture sequences, and developed a content syndication strategy across industry platforms.</p>
+                    </div>
+                    
+                    <div class="results-box">
+                        <h4>Results Achieved</h4>
+                        <div class="result-item">
+                            <span class="result-number">150+</span>
+                            <span class="result-text">Qualified B2B Leads<br>in 90 days</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">25%</span>
+                            <span class="result-text">Email Open Rate<br>improvement achieved</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">$75K</span>
+                            <span class="result-text">New Subscription<br>Revenue generated</span>
+                        </div>
+                        <div class="tools-used">
+                            <span class="tool-tag">LinkedIn Ads</span>
+                            <span class="tool-tag">Mailchimp</span>
+                            <span class="tool-tag">Looker Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <span class="section-badge">INVESTMENT</span>
+                <h2 class="section-title">Choose Your Growth Plan</h2>
+                <p class="section-subtitle">
+                    Flexible packages designed to scale with your business. All plans include transparent reporting and direct access to me.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card scroll-animate">
+                    <h3>Starter</h3>
+                    <div class="price">$500<span class="price-period">/mo</span></div>
+                    <ul>
+                        <li>SEO audit & strategy</li>
+                        <li>10 optimized blog posts</li>
+                        <li>Monthly performance report</li>
+                        <li>Email support</li>
+                        <li>Basic analytics setup</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center;">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured scroll-animate">
+                    <span class="pricing-badge">MOST POPULAR</span>
+                    <h3>Growth</h3>
+                    <div class="price">$1,200<span class="price-period">/mo</span></div>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Google/Meta Ads management</li>
+                        <li>Weekly optimization & A/B testing</li>
+                        <li>Social media strategy</li>
+                        <li>Priority support</li>
+                        <li>Monthly strategy calls</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Start Growing</a>
+                </div>
+
+                <div class="pricing-card scroll-animate">
+                    <h3>Premium</h3>
+                    <div class="price">$2,500<span class="price-period">/mo</span></div>
+                    <ul>
+                        <li>Everything in Growth</li>
+                        <li>Full-funnel marketing strategy</li>
+                        <li>Custom Looker Studio dashboards</li>
+                        <li>Bi-weekly strategy calls</li>
+                        <li>Unlimited support</li>
+                        <li>Email marketing campaigns</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center;">Scale Fast</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <span class="section-badge">GET IN TOUCH</span>
+                <h2 class="section-title">Ready to Scale Your Business?</h2>
+                <p class="section-subtitle">
+                    Let's discuss how data-driven marketing can transform your results. Book a free 30-minute strategy call.
+                </p>
+            </div>
+
+            <div class="contact-container">
+                <form class="contact-form scroll-animate">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company Inc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell Me About Your Project</label>
+                        <textarea id="message" name="message" placeholder="What are your main marketing challenges and goals?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
+                    <div class="contact-info">
+                        <p>Or reach out directly:</p>
+                        <p>📧 <a href="mailto:ayushghodake91@gmail.com">ayushghodake91@gmail.com</a></p>
+                        <p>💼 <a href="https://linkedin.com/in/ayush-ghodake" target="_blank">LinkedIn Profile</a></p>
+                        <p>⏰ Available Mon-Fri, 9 AM - 6 PM EST (Flexible for US clients)</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ayush Ghodake. All rights reserved.</p>
+            <p>Digital Marketing Specialist | Helping Businesses Grow with Data-Driven Strategies</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you! I will get back to you within 24 hours.');
+                this.reset();
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+            }, 1000);
+        });
+
+        // Add subtle parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
+            }
+        });
+    </script>
 </body>
 </html>
