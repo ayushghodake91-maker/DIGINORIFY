@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Ghodake | Digital Marketing Specialist | ROI-Focused Marketing</title>
+    <title>NORIFY | Digital Marketing Specialist | ROI-Focused Marketing</title>
     <meta name="description" content="Transform your business with data-driven digital marketing. Proven results: 4.5x ROAS, 40% CAC reduction, 200% traffic growth.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
